@@ -1,6 +1,6 @@
 # 🌀 VisageSphere — AI-Powered Face Recognition & Online Presence Search Engine
 
-![VisageSphere Banner](https://via.placeholder.com/800x200.png?text=VisageSphere+AI+Project)
+![VisageSphere Banner](./logo.png)
 
 ## 🌟 Introduction
 
