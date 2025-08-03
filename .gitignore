@@ -1,3 +1,5 @@
 /face_recog_backend/.venv
 /face_recog_backend/__pycache__
 /face_recog_backend/utils/__pycache__
+face_recog_backend/face_recog.db
+/face_recog_backend/routers/__pycache__
