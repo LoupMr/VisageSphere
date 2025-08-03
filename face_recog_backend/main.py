@@ -2,8 +2,6 @@
 from fastapi import FastAPI
 from contextlib import asynccontextmanager
 from utils.database import engine, Base
-
-# Import models so that they get registered with Base
 import utils.models  # noqa
 
 
@@ -26,6 +24,10 @@ app = FastAPI(
 @app.get("/")
 async def root():
     return {"message": "Welcome to Face Recognition Search API"}
+
+@app.get("/status")
+async def status():
+    return {"status": "ok"}
 
 # Later we'll include routers here:
 # from routers import face, search
