@@ -1,12 +1,27 @@
 # main.py
 from fastapi import FastAPI
+from contextlib import asynccontextmanager
+from utils.database import engine, Base
+
+# Import models so that they get registered with Base
+import utils.models  # noqa
+
+
+@asynccontextmanager
+async def lifespan(app: FastAPI):
+    # Create tables on startup
+    Base.metadata.create_all(bind=engine)
+    yield
+
 
 app = FastAPI(
     title="Face Recognition Search API",
     version="0.1.0",
     docs_url="/docs",
-    redoc_url="/redoc"
+    redoc_url="/redoc",
+    lifespan=lifespan
 )
+
 
 @app.get("/")
 async def root():
