@@ -1,1 +1,3 @@
 /face_recog_backend/.venv
+/face_recog_backend/__pycache__
+/face_recog_backend/utils/__pycache__
